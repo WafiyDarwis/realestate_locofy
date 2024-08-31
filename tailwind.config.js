@@ -27,6 +27,7 @@ module.exports = {
         darkslategray: "#434343",
         lightslategray: "#889099",
         "primary-800": "#1e2640",
+        turquoise: "#60e6d6",
         darkslateblue: "#2b3a67",
         steelblue: "#404f7b",
         "primary-700": "#2c3a61",
