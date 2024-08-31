@@ -1,46 +1,26 @@
-import { useMemo } from "react";
-import PropTypes from "prop-types";
-
-const PropertyCard = ({
-  className = "",
-  propWidth,
-  propFlex,
-  propMinWidth,
-  propertyImage,
-  ellipse1,
-}) => {
-  const card1Style = useMemo(() => {
-    return {
-      width: propWidth,
-      flex: propFlex,
-      minWidth: propMinWidth,
-    };
-  }, [propWidth, propFlex, propMinWidth]);
-
+const PropertyCard = ({ imgUrl, name, price }) => {
   return (
     <div
-      className={`h-[467px] w-[350px] rounded-3xs bg-gray-white border-whitesmoke-100 border-[1px] border-solid box-border flex flex-col items-start justify-start py-[15px] px-[13px] gap-[23px] text-left text-mini-5 text-gray-700 font-body-regular-600 hover:bg-gainsboro hover:cursor-pointer sm:w-[100%!important] sm:mb-5 ${className}`}
-      style={card1Style}
-    >
+      className="h-[467px] w-[350px] rounded-3xs bg-gray-white border-whitesmoke-100 border-[1px] border-solid box-border flex flex-col items-start justify-start py-[15px] px-[13px] gap-[23px] text-left text-mini-5 text-gray-700 font-body-regular-600 hover:bg-gainsboro hover:cursor-pointer sm:w-[100%!important] sm:mb-5">
       <img
-        className="self-stretch relative rounded-3xs max-w-full overflow-hidden h-[200px] shrink-0 object-cover"
+        className="self-stretch rounded-3xs max-w-full overflow-hidden h-[200px] shrink-0 object-cover"
         alt=""
-        src={propertyImage}
+        src={imgUrl}
       />
       <div className="self-stretch flex flex-row items-start justify-start p-2.5">
         <div className="flex-1 relative leading-[20.32px] font-medium">
-          92 ALLIUM PLACE, ORLANDO FL 32827
+          {name}
         </div>
       </div>
       <div className="self-stretch flex flex-row items-start justify-start p-2.5 text-sm-6 text-primary-500">
         <div className="relative leading-[18.98px] font-semibold">
-          $ 590,693
+          $ {price}
         </div>
       </div>
       <div className="self-stretch flex flex-row items-start justify-start py-0 px-2.5 gap-[17px] text-2xs-8 text-gray-500">
         <div className="flex flex-row items-center justify-start gap-[4.4px]">
           <img
-            className="w-[17.4px] relative h-[17.4px]"
+            className="w-[17.4px] h-[17.4px]"
             alt=""
             src="/car.svg"
           />
@@ -48,7 +28,7 @@ const PropertyCard = ({
         </div>
         <div className="flex flex-row items-center justify-start gap-[4.4px]">
           <img
-            className="w-[17.4px] relative h-[17.4px]"
+            className="w-[17.4px] h-[17.4px]"
             alt=""
             src="/bathtub.svg"
           />
@@ -56,7 +36,7 @@ const PropertyCard = ({
         </div>
         <div className="flex flex-row items-center justify-start gap-[4.4px]">
           <img
-            className="w-[17.4px] relative h-[17.4px]"
+            className="w-[17.4px] h-[17.4px]"
             alt=""
             src="/arrowsout.svg"
           />
@@ -68,9 +48,9 @@ const PropertyCard = ({
       <div className="self-stretch flex flex-row items-center justify-between text-center text-xs-6">
         <div className="flex flex-row items-center justify-start gap-[5.8px]">
           <img
-            className="w-[27.6px] relative rounded-[50%] h-[27.6px] object-cover"
+            className="w-[27.6px] rounded-[50%] h-[27.6px] object-cover"
             alt=""
-            src={ellipse1}
+            src="/ellipse-1@2x.png"
           />
           <div className="relative leading-[17.42px] font-medium">
             Jenny Wilson
@@ -79,21 +59,21 @@ const PropertyCard = ({
         <div className="flex flex-row items-start justify-start gap-[8.7px]">
           <div className="rounded-[1.45px] bg-primary-50 flex flex-row items-start justify-start p-[2.9px]">
             <img
-              className="w-[14.5px] relative h-[14.5px]"
+              className="w-[14.5px] h-[14.5px]"
               alt=""
               src="/sharenetwork.svg"
             />
           </div>
           <div className="rounded-[1.45px] bg-primary-50 flex flex-row items-start justify-start p-[2.9px]">
             <img
-              className="w-[14.5px] relative h-[14.5px]"
+              className="w-[14.5px] h-[14.5px]"
               alt=""
               src="/heart.svg"
             />
           </div>
           <div className="rounded-[1.45px] bg-primary-50 flex flex-row items-start justify-start p-[2.9px]">
             <img
-              className="w-[14.5px] relative h-[14.5px]"
+              className="w-[14.5px] h-[14.5px]"
               alt=""
               src="/plus.svg"
             />
@@ -104,15 +84,5 @@ const PropertyCard = ({
   );
 };
 
-PropertyCard.propTypes = {
-  className: PropTypes.string,
-  propertyImage: PropTypes.string,
-  ellipse1: PropTypes.string,
-
-  /** Style props */
-  propWidth: PropTypes.any,
-  propFlex: PropTypes.any,
-  propMinWidth: PropTypes.any,
-};
 
 export default PropertyCard;

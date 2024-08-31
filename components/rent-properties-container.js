@@ -19,32 +19,24 @@ const RentPropertiesContainer = ({ className = "" }) => {
         </div>
         <div className="self-stretch flex flex-row items-center justify-center flex-wrap content-center py-0 px-2.5 gap-8">
           <PropertyCard
-            propWidth="unset"
-            propFlex="1"
-            propMinWidth="355px"
-            propertyImage="/property-image7@2x.png"
-            ellipse1="/ellipse-1@2x.png"
+            imgUrl="/property-image7@2x.png"
+            name="92 Allium Place, Orlando FL"
+            price="590,632"
           />
           <PropertyCard
-            propWidth="unset"
-            propFlex="1"
-            propMinWidth="355px"
-            propertyImage="/property-image8@2x.png"
-            ellipse1="/ellipse-1@2x.png"
+            imgUrl="/property-image8@2x.png"
+            name="92 Allium Place, Orlando FL"
+            price="590,632"
           />
           <PropertyCard
-            propWidth="unset"
-            propFlex="1"
-            propMinWidth="355px"
-            propertyImage="/property-image9@2x.png"
-            ellipse1="/ellipse-1@2x.png"
+            imgUrl="/property-image9@2x.png"
+            name="92 Allium Place, Orlando FL"
+            price="590,632"
           />
           <PropertyCard
-            propWidth="unset"
-            propFlex="1"
-            propMinWidth="355px"
-            propertyImage="/property-image10@2x.png"
-            ellipse1="/ellipse-1@2x.png"
+            imgUrl="/property-image10@2x.png"
+            name="92 Allium Place, Orlando FL"
+            price="590,632"
           />
         </div>
       </div>

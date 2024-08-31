@@ -2,8 +2,15 @@ import "antd/dist/antd.min.css";
 import { Dropdown, Menu } from "antd";
 import { DownOutlined } from "@ant-design/icons";
 import PropTypes from "prop-types";
+import { useRouter } from "next/router"
 
 const HeroSection = ({ className = "" }) => {
+  const router = useRouter()
+
+  const onSearchCTAClick = () => {
+    router.push("/properties-grid-view1")
+  }
+
   return (
     <div
       className={`self-stretch flex flex-col items-center justify-start py-[120px] px-[30px] bg-[url('/hero-section@3x.png')] bg-cover bg-no-repeat bg-[top] text-center text-33xl text-gray-white font-body-regular-400 ${className}`}
@@ -123,7 +130,7 @@ const HeroSection = ({ className = "" }) => {
                   </a>
                 </Dropdown>
               </div>
-              <button className="cursor-pointer [border:none] py-3 px-6 bg-primary-500 w-[102px] rounded flex flex-row items-center justify-center box-border hover:bg-darkslateblue md:w-full md:hover:items-center md:hover:justify-center sm:self-stretch sm:w-auto sm:max-w-full sm:hover:bg-steelblue sm:hover:self-stretch sm:hover:w-auto sm:hover:max-w-full">
+              <button onClick={onSearchCTAClick} className="cursor-pointer [border:none] py-3 px-6 bg-primary-500 w-[102px] rounded flex flex-row items-center justify-center box-border hover:bg-darkslateblue md:w-full md:hover:items-center md:hover:justify-center sm:self-stretch sm:w-auto sm:max-w-full sm:hover:bg-steelblue sm:hover:self-stretch sm:hover:w-auto sm:hover:max-w-full">
                 <div className="relative text-base leading-[24px] font-medium font-body-regular-600 text-gray-white text-center">
                   Search
                 </div>

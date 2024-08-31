@@ -9,7 +9,7 @@ import FooterSection from "../components/footer-section";
 
 const LandingPage = () => {
   return (
-    <div className="w-full h-[5096px] relative bg-gray-white flex flex-col items-center justify-start">
+    <div className="w-full relative bg-gray-white flex flex-col items-center justify-start">
       <Header />
       <HeroSection />
       <AreaContainer />
